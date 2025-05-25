@@ -1,0 +1,17 @@
+<% if notice %>
+  <div class="max-w-lg mx-auto mt-6 bg-cyan-900/80 border border-cyan-400 text-cyan-200 font-semibold rounded-lg px-6 py-4 shadow-lg flex items-center space-x-3">
+    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+    </svg>
+    <span><%= notice %></span>
+  </div>
+<% end %>
+
+<% if alert %>
+  <div class="max-w-lg mx-auto mt-6 bg-red-900/80 border border-red-400 text-red-200 font-semibold rounded-lg px-6 py-4 shadow-lg flex items-center space-x-3">
+    <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-1.414-1.414A9 9 0 105.636 18.364l1.414-1.414A7 7 0 1116.95 7.05z" />
+    </svg>
+    <span><%= alert %></span>
+  </div>
+<% end %>

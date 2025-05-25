@@ -1,0 +1,21 @@
+<div style="max-width:480px;margin:0 auto;background:#10141a;border-radius:16px;padding:32px 24px;border:1px solid #0ff;box-shadow:0 4px 32px rgba(0,255,255,0.08);font-family:sans-serif;">
+  <h2 style="color:#0ff;font-size:24px;font-weight:800;letter-spacing:1.5px;margin-bottom:24px;text-align:center;">
+    Hello <%= @email %>!
+  </h2>
+
+  <% if @resource.try(:unconfirmed_email?) %>
+    <p style="color:#b2f5ea;font-size:16px;line-height:1.6;margin-bottom:20px;text-align:center;">
+      We're contacting you to notify you that your email is being changed to
+      <span style="color:#0ff;font-weight:600;"><%= @resource.unconfirmed_email %></span>.
+    </p>
+  <% else %>
+    <p style="color:#b2f5ea;font-size:16px;line-height:1.6;margin-bottom:20px;text-align:center;">
+      We're contacting you to notify you that your email has been changed to
+      <span style="color:#0ff;font-weight:600;"><%= @resource.email %></span>.
+    </p>
+  <% end %>
+
+  <p style="color:#7dd3fc;font-size:12px;text-align:center;margin-top:16px;">
+    If you did not request this change, please contact support immediately.
+  </p>
+</div>
