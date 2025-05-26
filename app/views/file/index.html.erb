@@ -14,13 +14,14 @@
       <tbody>
       <% @files.each do |file| %>
         <tr class="border-b border-gray-700 hover:bg-gray-800 transition">
+
           <td class="px-4 py-3 text-cyan-100">
             <%= file.filename %> <%= file.id %>
           </td>
           <td class="px-4 py-3">
             <div class="flex space-x-2">
               <%# View (only if viewable) %>
-              <% if file.content_type.start_with?("image/") || file.content_type == "application/pdf" %>
+              <% if file.representable? %>
                 <%= link_to "View", file, target: "_blank",
                             class: "bg-cyan-400 hover:bg-cyan-500 text-black font-bold py-1 px-4 rounded-full transition shadow-md text-sm" %>
               <% else %>

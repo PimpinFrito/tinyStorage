@@ -1,17 +1,27 @@
-<div class="w-full max-w-md p-10 rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 via-black to-gray-800 border border-gray-700">
-  <h1 class="text-3xl font-extrabold text-cyan-400 mb-8 text-center tracking-wide">Upload Your File</h1>
-  <%= form_with url: "/upload", local: true, html: { multipart: true, class: "space-y-6" } do |form| %>
-    <div class="flex flex-col items-center">
-      <label class="w-full flex flex-col items-center px-4 py-6 bg-gray-800 text-cyan-400 rounded-lg shadow-lg tracking-wide uppercase border border-cyan-400 cursor-pointer hover:bg-cyan-900 transition">
-        <svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v8m0 0l-3-3m3 3l3-3m-9-4V7a2 2 0 012-2h6a2 2 0 012 2v5" />
-        </svg>
-        <span class="mt-2 text-base leading-normal">Select a file</span>
-        <%= form.file_field :file, class: "hidden" %>
-      </label>
-    </div>
-    <div class="flex justify-center">
-      <%= form.submit "Upload", class: "bg-cyan-400 hover:bg-cyan-500 text-black font-bold py-2 px-6 rounded-full transition" %>
-    </div>
-  <% end %>
+<div class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-black ">
+  <!-- Logo/Brand -->
+  <div class="mb-12">
+    <span class="text-cyan-400 font-extrabold text-5xl tracking-widest drop-shadow-lg select-none">
+      Tiny Storage
+    </span>
+  </div>
+
+  <!-- Headline -->
+  <h1 class="text-4xl md:text-5xl font-extrabold text-cyan-200 mb-6 text-center tracking-wide drop-shadow">
+    The Future of Simple File Sharing
+  </h1>
+  <p class="text-cyan-100 text-lg md:text-xl mb-12 text-center max-w-xl">
+    Effortlessly upload, manage, and share your files with a sleek, secure, and lightning-fast platform.
+  </p>
+
+  <!-- Call to Action -->
+  <div class="flex space-x-4 justify-center">
+    <%= link_to "Get Started", new_user_registration_path,
+                class: "bg-cyan-400 hover:bg-cyan-500 text-black font-bold py-3 px-8 rounded-full text-lg transition shadow-md" %>
+    <%= link_to "Sign In", new_user_session_path,
+                class: "bg-gray-800 border border-cyan-400 text-cyan-400 hover:bg-cyan-900 hover:text-cyan-300 font-bold py-3 px-8 rounded-full text-lg transition shadow-md" %>
+  </div>
+
+  <!-- Subtle Glow/Accent -->
+  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-96 h-32 bg-cyan-400 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
 </div>
