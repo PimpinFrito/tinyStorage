@@ -72,4 +72,4 @@ gem "tailwindcss-rails", "~> 4.2"
 
 gem "aws-sdk-s3", "~> 1.186"
 
-# gem "pg", "~> 1.5"
+gem "pg", "~> 1.5"
