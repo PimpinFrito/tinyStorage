@@ -30,10 +30,10 @@ production:
   primary:
     <<: *default
     adapter: postgresql
-    database: postgres   # <-- Use your actual RDS database name here!
-    username: iamadmin
-    password: DTsohexx0eEpZYKDaIiS
-    host: tinystoragedb.cluster-cvyi60ymgh3x.us-east-1.rds.amazonaws.com
+    database: <%= ENV['POSTGRES_DB_NAME'] %> # <-- Use your actual RDS database name here!
+    username: <%= ENV['POSTGRES_DB_USER'] %>
+    password: <%= ENV['POSTGRES_DB_PASSWORD'] %>
+    host: <%= ENV['POSTGRES_DB_HOST'] %>
   cache:
     <<: *default
     adapter: sqlite3
