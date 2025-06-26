@@ -70,6 +70,6 @@ gem "tailwindcss-ruby", "~> 4.1"
 
 gem "tailwindcss-rails", "~> 4.2"
 
-gem "aws-sdk-s3", "~> 1.186"
+gem "aws-sdk-s3", "~> 1.191"
 
 gem "pg", "~> 1.5"
